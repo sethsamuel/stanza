@@ -1,0 +1,49 @@
+@import "bourbon/bourbon"
+
+$brand-primary: #ff9818;
+
+*
+	position: relative
+
+html,body
+	font-size: 12px
+	font-family: 'Helvetica Neue', Helvetica, sans-serif
+	padding: 0
+	margin: 0
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+html
+	background-color: $brand-primary
+
+body
+	@include radial-gradient(80% 60%, ellipse cover, darken($brand-primary, 10%) 0%, $brand-primary 74%)
+
+#application
+	display: none
+	&.loaded
+		display: block
+
+		&+#loading
+			display: none
+
+#loading
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 1
+	background: black
+	display: flex
+	align-items: center
+
+	h1
+		color: white
+		font-size: 4rem
+		font-weight: 100
+		text-align: center
+		width: 100%
