@@ -14,7 +14,7 @@ gulp.task("views", function(){
 });
 
 gulp.task("scripts", function(){
-	gulp.src(["src/js/index.js", "src/js/application.js"])
+	gulp.src(["src/js/index.js"])
 		.pipe(named())
 		.pipe(webpack(require("./webpack.config.js")))
 		.pipe(gulp.dest("dist/js"));
