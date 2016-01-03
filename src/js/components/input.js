@@ -12,12 +12,12 @@ const style = {
 };
 
 export default class Input extends React.Component {
-	onKeyUp() {
+	onChange() {
 		this.props.onChange(this.refs.textarea.value);
 	}
 
 	render() {
-		return <textarea ref="textarea" style={style} onKeyUp={this.onKeyUp.bind(this)} />;
+		return <textarea ref="textarea" style={style} onChange={this.onChange.bind(this)} />;
 	}
 }
 
