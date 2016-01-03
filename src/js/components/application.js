@@ -9,6 +9,7 @@ import {SET_TEXT, setText} from "../redux/actions";
 import Navigation from "./navigation";
 import Input from "./input";
 import CharacterCount from "./character_count";
+import Syllables from "./syllables";
 
 class Application extends React.Component {
 	render() {
@@ -18,6 +19,7 @@ class Application extends React.Component {
 			<Navigation/>
 			<Input onChange={text => dispatch(setText(text))} />
 			<CharacterCount count={text.characterCount} />
+			<Syllables syllables={text.syllables}/>
 		</div>
 		;
 	}
