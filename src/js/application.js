@@ -1,16 +1,19 @@
+// React
 import React from "react";
-import ReactDOM from "react-dom";
+import {render} from "react-dom";
 
-import Navigation from "./components/navigation";
+// Redux
+import {createStore} from "redux";
+import {Provider} from "react-redux";
+import {default as reducers} from "./redux/reducers";
 
-class Application extends React.Component {
-	render() {
-		return <Navigation/>;
-	}
-}
+// Components
+import Application from "./components/application";
+
+const store = createStore(reducers);
 
 module.exports = function(rootNode) {
-	ReactDOM.render(<Application/>, rootNode);
+	render(<Provider store={store}><Application/></Provider>, rootNode);
 
 	console.log("Application loaded");
 }

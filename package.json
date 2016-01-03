@@ -31,6 +31,8 @@
     "jpeg-js": "0.1.1",
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
+    "react-redux": "^4.0.6",
+    "redux": "^3.0.5",
     "vinyl-named": "1.1.0",
     "webpack": "1.12.9"
   }
