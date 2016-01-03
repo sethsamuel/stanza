@@ -14,12 +14,14 @@ import Syllables from "./syllables";
 class Application extends React.Component {
 	render() {
 		const { dispatch, text } = this.props;
+		const twitterLink = `https://twitter.com/share?text=${encodeURI(this.props.text.text)} #stanza`;
 
 		return <div>
 			<Navigation/>
 			<Input onChange={text => dispatch(setText(text))} />
 			<CharacterCount count={text.characterCount} />
 			<Syllables syllables={text.syllables}/>
+			<a href={twitterLink} target="_blank">Tweet it!</a>
 		</div>
 		;
 	}
