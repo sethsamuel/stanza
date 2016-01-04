@@ -11,6 +11,17 @@ import Input from "./input";
 import CharacterCount from "./character_count";
 import Syllables from "./syllables";
 
+const linkStyle = {
+	background: "white",
+	display: "block",
+	textAlign: "center",
+	fontSize: "1.1rem",
+	padding: 16,
+	marginTop: 16,
+	width: 300,
+	textDecoration: "none"
+};
+
 class Application extends React.Component {
 	render() {
 		const { dispatch, text } = this.props;
@@ -21,7 +32,7 @@ class Application extends React.Component {
 			<Input onChange={text => dispatch(setText(text))} />
 			<CharacterCount count={text.characterCount} />
 			<Syllables syllables={text.syllables}/>
-			<a href={twitterLink} target="_blank">Tweet it!</a>
+			<a style={linkStyle} href={twitterLink} target="_blank">Tweet it!</a>
 		</div>
 		;
 	}

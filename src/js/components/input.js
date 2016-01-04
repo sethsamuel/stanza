@@ -8,6 +8,7 @@ const style = {
 	outline: 0,
 	border: 0,
 	padding: 8,
+	marginBottom: 8,
 	fontSize: "1rem"
 };
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 const navStyle = {
-	padding: "16px"
+	padding: "16px 0"
 };
 
 const headerStyle = {
